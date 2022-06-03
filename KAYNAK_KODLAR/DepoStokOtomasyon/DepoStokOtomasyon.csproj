@@ -1,0 +1,654 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Xamarin.Forms.3.6.0.344457\build\Xamarin.Forms.props" Condition="Exists('..\packages\Xamarin.Forms.3.6.0.344457\build\Xamarin.Forms.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4070AB07-F849-47D5-9DF3-6555B0910483}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DepoStokOtomasyon</RootNamespace>
+    <AssemblyName>DepoStokOtomasyon</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu.Licensing, Version=1.1.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.1.4\lib\Bunifu.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.1.4\lib\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton, Version=2.1.4.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.1.4\lib\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCheckBox, Version=2.1.4.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.1.4\lib\Bunifu.UI.WinForms.BunifuCheckBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCircleProgress, Version=2.1.4.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.1.4\lib\Bunifu.UI.WinForms.BunifuCircleProgress.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuColorTransition, Version=2.1.4.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.1.4\lib\Bunifu.UI.WinForms.BunifuColorTransition.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView, Version=2.1.4.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.1.4\lib\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDatePicker, Version=2.1.4.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.1.4\lib\Bunifu.UI.WinForms.BunifuDatePicker.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDropdown, Version=2.1.4.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.1.4\lib\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuFormDock, Version=2.1.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.1.4\lib\Bunifu.UI.WinForms.BunifuFormDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGauge, Version=2.1.4.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.1.4\lib\Bunifu.UI.WinForms.BunifuGauge.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuImageButton, Version=2.1.4.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.1.4\lib\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuLabel, Version=2.1.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.1.4\lib\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPages, Version=2.1.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.1.4\lib\Bunifu.UI.WinForms.BunifuPages.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox, Version=2.1.4.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.1.4\lib\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuProgressBar, Version=2.1.4.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.1.4\lib\Bunifu.UI.WinForms.BunifuProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuRadioButton, Version=2.1.4.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.1.4\lib\Bunifu.UI.WinForms.BunifuRadioButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuScrollBar, Version=2.1.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.1.4\lib\Bunifu.UI.WinForms.BunifuScrollBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuShadowPanel, Version=2.1.4.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.1.4\lib\Bunifu.UI.WinForms.BunifuShadowPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSlider, Version=2.1.4.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.1.4\lib\Bunifu.UI.WinForms.BunifuSlider.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextBox, Version=2.1.4.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.1.4\lib\Bunifu.UI.WinForms.BunifuTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuToggleSwitch, Version=2.1.4.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.1.4\lib\Bunifu.UI.WinForms.BunifuToggleSwitch.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuToolTip, Version=2.1.4.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.1.4\lib\Bunifu.UI.WinForms.BunifuToolTip.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTransition, Version=2.1.4.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.1.4\lib\Bunifu.UI.WinForms.BunifuTransition.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuUserControl, Version=2.1.4.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.1.4\lib\Bunifu.UI.WinForms.BunifuUserControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.Deprecated, Version=2.1.4.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.2.1.4\lib\Bunifu.UI.WinForms.Deprecated.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="itextsharp, Version=5.0.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Syncfusion.Core.XForms, Version=17.4451.0.40, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Xamarin.Core.17.4.0.40\lib\netstandard2.0\Syncfusion.Core.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Licensing, Version=17.4460.0.40, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Licensing.17.4.0.40\lib\net46\Syncfusion.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Forms.3.6.0.344457\lib\netstandard2.0\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Forms.3.6.0.344457\lib\netstandard2.0\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Forms.3.6.0.344457\lib\netstandard2.0\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BirimDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BirimDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CikisDepoDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CikisDepoDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FirmaDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FirmaDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\AnalizDepoTransferleri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\AnalizDepoTransferleri.Designer.cs">
+      <DependentUpon>AnalizDepoTransferleri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Anasayfa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Anasayfa.Designer.cs">
+      <DependentUpon>Anasayfa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\DepoTanim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\DepoTanim.Designer.cs">
+      <DependentUpon>DepoTanim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\DepoSayim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\DepoSayim.Designer.cs">
+      <DependentUpon>DepoSayim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\DepoTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\DepoTransfer.Designer.cs">
+      <DependentUpon>DepoTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\FirmaTanim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\FirmaTanim.Designer.cs">
+      <DependentUpon>FirmaTanim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Giris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Giris.Designer.cs">
+      <DependentUpon>Giris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\HesapHareket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\HesapHareket.Designer.cs">
+      <DependentUpon>HesapHareket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Hesaplar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Hesaplar.Designer.cs">
+      <DependentUpon>Hesaplar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Islemler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Islemler.Designer.cs">
+      <DependentUpon>Islemler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Kasa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Kasa.Designer.cs">
+      <DependentUpon>Kasa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\KullaniciHesap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\KullaniciHesap.Designer.cs">
+      <DependentUpon>KullaniciHesap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\MevcutStok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\MevcutStok.Designer.cs">
+      <DependentUpon>MevcutStok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\Rapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\Rapor.Designer.cs">
+      <DependentUpon>Rapor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\StokHareket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\StokHareket.Designer.cs">
+      <DependentUpon>StokHareket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\StokListeleGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\StokListeleGiris.Designer.cs">
+      <DependentUpon>StokListeleGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GirisDepoDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GirisDepoDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HesapFirma.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HesapFirma.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HesapT1DS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HesapT1DS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HesapT2DS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HesapT2DS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ILDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ILDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="KategoriDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KategoriDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Formlar\StokCikis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\StokCikis.Designer.cs">
+      <DependentUpon>StokCikis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\StokGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\StokGiris.Designer.cs">
+      <DependentUpon>StokGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formlar\StokTanim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formlar\StokTanim.Designer.cs">
+      <DependentUpon>StokTanim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StokCDDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StokCDDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="StokGDDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StokGDDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="StokGFDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StokGFDS.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Formlar\AnalizDepoTransferleri.resx">
+      <DependentUpon>AnalizDepoTransferleri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Anasayfa.resx">
+      <DependentUpon>Anasayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\DepoTanim.resx">
+      <DependentUpon>DepoTanim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\DepoSayim.resx">
+      <DependentUpon>DepoSayim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\DepoTransfer.resx">
+      <DependentUpon>DepoTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\FirmaTanim.resx">
+      <DependentUpon>FirmaTanim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Giris.resx">
+      <DependentUpon>Giris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\HesapHareket.resx">
+      <DependentUpon>HesapHareket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Hesaplar.resx">
+      <DependentUpon>Hesaplar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Islemler.resx">
+      <DependentUpon>Islemler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Kasa.resx">
+      <DependentUpon>Kasa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\KullaniciHesap.resx">
+      <DependentUpon>KullaniciHesap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\MevcutStok.resx">
+      <DependentUpon>MevcutStok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\Rapor.resx">
+      <DependentUpon>Rapor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\StokHareket.resx">
+      <DependentUpon>StokHareket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\StokListeleGiris.resx">
+      <DependentUpon>StokListeleGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Formlar\StokCikis.resx">
+      <DependentUpon>StokCikis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\StokGiris.resx">
+      <DependentUpon>StokGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formlar\StokTanim.resx">
+      <DependentUpon>StokTanim.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="BirimDS.xsc">
+      <DependentUpon>BirimDS.xsd</DependentUpon>
+    </None>
+    <None Include="BirimDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BirimDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BirimDS.xss">
+      <DependentUpon>BirimDS.xsd</DependentUpon>
+    </None>
+    <None Include="CikisDepoDS.xsc">
+      <DependentUpon>CikisDepoDS.xsd</DependentUpon>
+    </None>
+    <None Include="CikisDepoDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CikisDepoDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CikisDepoDS.xss">
+      <DependentUpon>CikisDepoDS.xsd</DependentUpon>
+    </None>
+    <None Include="FirmaDS.xsc">
+      <DependentUpon>FirmaDS.xsd</DependentUpon>
+    </None>
+    <None Include="FirmaDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FirmaDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FirmaDS.xss">
+      <DependentUpon>FirmaDS.xsd</DependentUpon>
+    </None>
+    <None Include="GirisDepoDS.xsc">
+      <DependentUpon>GirisDepoDS.xsd</DependentUpon>
+    </None>
+    <None Include="GirisDepoDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GirisDepoDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GirisDepoDS.xss">
+      <DependentUpon>GirisDepoDS.xsd</DependentUpon>
+    </None>
+    <None Include="HesapFirma.xsc">
+      <DependentUpon>HesapFirma.xsd</DependentUpon>
+    </None>
+    <None Include="HesapFirma.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HesapFirma.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HesapFirma.xss">
+      <DependentUpon>HesapFirma.xsd</DependentUpon>
+    </None>
+    <None Include="HesapT1DS.xsc">
+      <DependentUpon>HesapT1DS.xsd</DependentUpon>
+    </None>
+    <None Include="HesapT1DS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HesapT1DS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HesapT1DS.xss">
+      <DependentUpon>HesapT1DS.xsd</DependentUpon>
+    </None>
+    <None Include="HesapT2DS.xsc">
+      <DependentUpon>HesapT2DS.xsd</DependentUpon>
+    </None>
+    <None Include="HesapT2DS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HesapT2DS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HesapT2DS.xss">
+      <DependentUpon>HesapT2DS.xsd</DependentUpon>
+    </None>
+    <None Include="ILDS.xsc">
+      <DependentUpon>ILDS.xsd</DependentUpon>
+    </None>
+    <None Include="ILDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ILDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ILDS.xss">
+      <DependentUpon>ILDS.xsd</DependentUpon>
+    </None>
+    <None Include="KategoriDS.xsc">
+      <DependentUpon>KategoriDS.xsd</DependentUpon>
+    </None>
+    <None Include="KategoriDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KategoriDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="KategoriDS.xss">
+      <DependentUpon>KategoriDS.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="PDF\DepoSayimRapor_10.06.2020.pdf" />
+    <None Include="PDF\test.pdf" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="StokCDDS.xsc">
+      <DependentUpon>StokCDDS.xsd</DependentUpon>
+    </None>
+    <None Include="StokCDDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StokCDDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="StokCDDS.xss">
+      <DependentUpon>StokCDDS.xsd</DependentUpon>
+    </None>
+    <None Include="StokGDDS.xsc">
+      <DependentUpon>StokGDDS.xsd</DependentUpon>
+    </None>
+    <None Include="StokGDDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StokGDDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="StokGDDS.xss">
+      <DependentUpon>StokGDDS.xsd</DependentUpon>
+    </None>
+    <None Include="StokGFDS.xsc">
+      <DependentUpon>StokGFDS.xsd</DependentUpon>
+    </None>
+    <None Include="StokGFDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StokGFDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="StokGFDS.xss">
+      <DependentUpon>StokGFDS.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="img\2001870-48.png" />
+    <Content Include="img\2001871-48%281%29.png" />
+    <Content Include="img\2001871-48.png" />
+    <Content Include="img\2001885-48%281%29.png" />
+    <Content Include="img\2001885-48%282%29.png" />
+    <Content Include="img\2001885-48%283%29.png" />
+    <Content Include="img\2001885-48.png" />
+    <Content Include="img\314879-64.png" />
+    <Content Include="img\699311-icon-40-clipboard-list-256.png" />
+    <Content Include="img\company %281%29.png" />
+    <Content Include="img\company.png" />
+    <Content Include="img\enterprise.png" />
+    <Content Include="img\file-empty-256.png" />
+    <Content Include="img\file-powerpoint-512.png" />
+    <Content Include="img\floppy-disk.png" />
+    <Content Include="img\iconfinder_18_330400.png" />
+    <Content Include="img\iconfinder_box-in_299102.png" />
+    <Content Include="img\iconfinder_box-out_299067.png" />
+    <Content Include="img\iconfinder_BT_printer_905556.png" />
+    <Content Include="img\incele.png" />
+    <Content Include="img\notepad-256.png" />
+    <Content Include="img\Plus-512 %281%29.png" />
+    <Content Include="img\re.png" />
+    <Content Include="img\save.png" />
+    <Content Include="img\Screenshot_2020-01-02 Iconfinder • Editor.png" />
+    <Content Include="img\search-256.png" />
+    <Content Include="img\Sign_Out.png" />
+    <Content Include="img\statistics.png" />
+    <Content Include="img\stock.png" />
+    <Content Include="img\storage.png" />
+    <Content Include="img\strongbox.png" />
+    <Content Include="img\transfer-512.png" />
+    <Content Include="img\UI_Basic_GLYPH-73-256.png" />
+    <Content Include="img\user-512 %281%29.png" />
+    <Content Include="img\User-512.png" />
+    <Content Include="img\warehouse.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Xamarin.Forms.3.6.0.344457\build\Xamarin.Forms.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Xamarin.Forms.3.6.0.344457\build\Xamarin.Forms.props'))" />
+    <Error Condition="!Exists('..\packages\Xamarin.Forms.3.6.0.344457\build\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Xamarin.Forms.3.6.0.344457\build\Xamarin.Forms.targets'))" />
+  </Target>
+  <Import Project="..\packages\Xamarin.Forms.3.6.0.344457\build\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.3.6.0.344457\build\Xamarin.Forms.targets')" />
+</Project>
